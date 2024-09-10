@@ -1,0 +1,16 @@
+form {
+    width: 100%;
+    max-width: 568px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid darkslateblue;
+    border-radius: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+h5 {
+    margin-bottom: 5px;
+}

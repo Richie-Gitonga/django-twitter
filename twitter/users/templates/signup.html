@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static%}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block header %}
+  <link rel="stylesheet" href="{% static 'css/form.css' %}">
+{% endblock %}
+
+{% block content %}
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <h2>Signup</h2>
+  <fieldset>
+    <h5>{{form.username.label}}:</h5>
+    {{form.username}}
+    <h5>{{form.password1.label}}:</h5>
+    {{form.password1}}
+    <small class="warning">Your password should be more than 8 characters long and should not copy the username</small>
+    <h5>{{form.password2.label}}:</h5>
+    {{form.password2}}
+    <h5>{{form.email.label}}:</h5>
+    {{form.email}}
+  </fieldset>
+  <button type="submit">Sign up</button>
+</form>
+{% endblock %}
